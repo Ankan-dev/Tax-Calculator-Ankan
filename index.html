@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax-Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div id="calc-container">
+      <form>
+        <div class="headings">
+          <p>Gross annual income</p>
+          <span class="info-container">
+            <i class="bi bi-question-circle" id="icon-1"></i>
+          <div class="info" id="info-1" >It is the total salary of the year before deductions</div>
+          </span>
+          
+        </div>
+        <div id="annual-income-input">
+          <input
+            placeholder="Enter gross annual income"
+            type="text"
+            id="annual-income"
+            class="inputs"
+          />
+          <span id="error-1">
+            <i class="bi bi-exclamation-circle" id="error-1-icon"></i>
+            <div id="error-1-message"> Please Enter numbers only</div>
+          </span>
+          
+        </div>
+
+        <div class="headings">
+          <p>Extra income</p>
+          <span class="info-container">
+            <i class="bi bi-question-circle" id="icon-2"></i>
+          <div class="info" id="info-2">money that is earned in addition to the regular paycheck</div>
+          </span>
+          
+        </div>
+        <div id="extra-income-input">
+          <input
+            placeholder="Enter extra income from other sources"
+            type="text"
+            id="extra-income"
+            class="inputs"
+          />
+          <span id="error-2">
+            <i class="bi bi-exclamation-circle" id="error-2-icon" ></i>
+            <div id="error-2-message"> Please Enter numbers only</div>
+          </span>
+          
+        </div>
+
+        <div class="headings">
+          <p>Age group</p>
+          <span class="info-container">
+            <i class="bi bi-question-circle" id="icon-3"></i>
+            <div class="info" id="info-3">The age group which you are at present</div>
+          </span>
+         
+        </div>
+        <div id="age-input">
+          <select id="age-group" class="inputs">
+            <option style="display: none"></option>
+            <option value="< 40">< 40</option>
+            <option value="≥ 40 & < 60 ">≥ 40 & < 60</option>
+            <option value="≥ 60 ">≥ 60</option>
+          </select>
+          <span id="error-3">
+            <i class="bi bi-exclamation-circle" id="error-3-icon" ></i>
+            <div id="error-3-message"> Please select the proper age group</div>
+          </span>
+          
+        </div>
+
+        <div class="headings">
+          <p>Total applicable deductions</p>
+          <span class="info-container" id="container-4">
+            <i class="bi bi-question-circle" id="icon-4"></i>
+          <div class="info" id="info-4">Total money spend in your daily expenses</div>
+          </span>
+          
+        </div>
+        <div id="deductions-input">
+          <input
+            placeholder="Add total applicable deductions"
+            type="text"
+            id="total-deductions"
+            class="inputs"
+          />
+          <span id="error-4">
+            <i class="bi bi-exclamation-circle" id="error-4-icon"></i>
+          <div id="error-4-message"> Please Enter numbers only</div>
+          </span>
+          
+        </div>
+
+        <button id="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="result-container">
+      <h1>Your overall income will be</h1>
+      <h2 id="final-value">12000000</h2>
+      <p>after tax deduction</p>
+      <button id="close">close</button>
+    </div>
+  </body>
+  <script src="scripts.js"></script>
+</html>
